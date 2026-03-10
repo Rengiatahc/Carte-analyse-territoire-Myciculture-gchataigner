@@ -176,14 +176,9 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
   <div class="logo">
     <div class="logo-icon">🍄</div>
     Analyse du territoire — Ferme mycicole
-    <span class="logo-sub">BPREA 2026</span>
+    <span class="logo-sub">BPREA 2026 — Grégoire Chataigner</span>
   </div>
-  <div class="hdr-pills">
-    <div class="pill"><div class="pill-dot" style="background:#e76f51"></div>Sites pressentis</div>
-    <div class="pill"><div class="pill-dot" style="background:#c8a84b"></div>Concurrents / Partenaires</div>
-    <div class="pill"><div class="pill-dot" style="background:#4a7c59"></div>Clients cibles</div>
-    <div class="pill"><div class="pill-dot" style="background:#457b9d"></div>Marchés</div>
-  </div>
+
 </div>
 
 <div id="layout">
@@ -268,6 +263,10 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <div class="leg-item">
         <div class="leg-circle" style="background:#52b788"></div>
         Épicerie fine, bio, vrac & circuit court
+      </div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#7b5ea7"></div>
+        Hôtellerie haut de gamme & spa
       </div>
     </div>
 
@@ -458,6 +457,17 @@ const MARCHES = [
   { nom: "Marché Producteurs Le Haillan", lat: 44.8937, lng: -0.6709, freq: "3e samedi du mois", type: "Marché de producteurs 100% local — légumes, viande, miel", color: "#457b9d" },
 ];
 
+const HOTELS = [
+  { nom: "Mondrian Bordeaux Les Carmes", lat: 44.8599, lng: -0.5683, type: "Hôtel design 5★ — Bassin à flot, clientèle internationale", color: "#7b5ea7" },
+  { nom: "InterContinental Bordeaux — Le Grand Hôtel", lat: 44.8424, lng: -0.5747, type: "Palace 5★ — Place de la Comédie, spa Guerlain, restaurant étoilé", color: "#7b5ea7" },
+  { nom: "Villas Foch", lat: 44.8473, lng: -0.5754, type: "Boutique hôtel 5★ — Spa, sauna, piscine, clientèle CSP+ premium", color: "#7b5ea7" },
+  { nom: "Hôtel Le Palais Gallien", lat: 44.8460, lng: -0.5841, type: "Hôtel boutique 5★ — Jardin, ambiance raffinée, clientèle CSP+", color: "#7b5ea7" },
+  { nom: "Maison Pavlov (Le Bouscat)", lat: 44.8625, lng: -0.6015, type: "Boutique hôtel spa ★★★★ — Restaurant gastronomique, clientèle affaires & loisirs", color: "#7b5ea7" },
+  { nom: "Villa Margaux & Spa (Fargues-St-Hilaire)", lat: 44.8214, lng: -0.4425, type: "Maison d'hôtes & spa privatif ★★★★ — Jacuzzi, wellness, œnotourisme", color: "#7b5ea7" },
+  { nom: "Les Criquets Hôtel Spa (Blanquefort)", lat: 44.9153, lng: -0.6274, type: "Hôtel spa ★★★★ — Piscine, massages, proche zone maraîchère nord", color: "#7b5ea7" },
+  { nom: "Château Grand Barrail & Spa (Saint-Émilion)", lat: 44.9091, lng: -0.1919, type: "Château hôtel spa ★★★★★ — Œnotourisme, restaurant gastronomique, clientèle internationale", color: "#7b5ea7" },
+];
+
 // ══════════════════════════════════════════════════════
 // INIT CARTE
 // ══════════════════════════════════════════════════════
@@ -618,6 +628,23 @@ function drawMarches() {
           <div class="pp-row"><span class="pp-lbl">Fréquence</span><span class="pp-val">${m.freq}</span></div>
           <div class="pp-row"><span class="pp-lbl">Caractère</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:130px">${m.type}</span></div>
           <span class="pp-tag" style="background:${m.color}">Marché cible</span>
+        </div>`, { maxWidth: 260 });
+  });
+
+  // ── Hôtels haut de gamme ──────────────────────────────
+  HOTELS.forEach(h => {
+    L.marker([h.lat, h.lng], { icon: makeIcon(h.color, '🏨', 11) })
+      .addTo(map)
+      .bindPopup(`
+        <div class="pp-head" style="background:${h.color}">
+          <div class="pp-icon" style="background:rgba(255,255,255,.2)">🏨</div>
+          <div>
+            <div class="pp-name">${h.nom}</div>
+            <div class="pp-sub">Hôtellerie haut de gamme</div>
+          </div>
+        </div>
+        <div class="pp-body">
+          <div class="pp-row"><span class="pp-lbl">Profil</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:130px">${h.type}</span></div>
         </div>`, { maxWidth: 260 });
   });
 }
