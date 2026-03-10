@@ -221,6 +221,14 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
         <div class="leg-circle" style="background:#e76f51"></div>
         Lormont / Cenon — rive droite
       </div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#e76f51"></div>
+        Bassin à Flot / Base sous-marine
+      </div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#e76f51"></div>
+        Benauge / Grand Parc
+      </div>
     </div>
 
     <div class="leg-section">
@@ -255,11 +263,11 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <div class="leg-title">Clients cibles HoReCa</div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#4a7c59"></div>
-        Restaurant gastronomique
+        Restaurant (gastronomique / bistronomique)
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#52b788"></div>
-        Épicerie fine / magasin bio
+        Épicerie fine, bio, vrac & circuit court
       </div>
     </div>
 
@@ -319,6 +327,26 @@ const SITES_PRODUCTION = [
     surface: "À définir — friches urbaines et zones activités",
     acces: "Pont d'Aquitaine — 5 min Bordeaux centre",
     contact: "Bordeaux Métropole / Mairies Lormont & Cenon",
+    color: "#e76f51"
+  },
+  {
+    nom: "Site pressenti — Bassin à Flot / Base sous-marine",
+    lat: 44.8705, lng: -0.5597,
+    statut: "Pressenti",
+    atouts: "Quartier en forte reconversion urbaine, espaces industriels réhabilités, flux touristique (Base sous-marine), logistique fluviale",
+    surface: "Entrepôts / ateliers à qualifier — Bd Alfred Daney",
+    acces: "5 min centre Bordeaux — tram ligne C",
+    contact: "Bordeaux Métropole / Agence de développement Bassins à flot",
+    color: "#e76f51"
+  },
+  {
+    nom: "Site pressenti — Quartier Benauge / Grand Parc",
+    lat: 44.8577, lng: -0.5821,
+    statut: "Pressenti",
+    atouts: "Quartier populaire en rénovation, tissu associatif fort, insertion par l'activité économique possible, locaux disponibles",
+    surface: "Locaux associatifs / ateliers à qualifier",
+    acces: "Bordeaux Nord — 10 min centre",
+    contact: "Bordeaux Métropole / Mairie de Bordeaux",
     color: "#e76f51"
   }
 ];
@@ -387,20 +415,47 @@ const CONCURRENTS = [
 ];
 
 const CLIENTS_HORECA = [
+  // Restaurants
   { nom: "Le Pressoir d'Argent (Gordon Ramsay)", lat: 44.8415, lng: -0.5723, type: "Restaurant gastronomique ⭐⭐", color: "#4a7c59" },
   { nom: "Le Prince Noir", lat: 44.8680, lng: -0.5195, type: "Restaurant gastronomique ⭐", color: "#4a7c59" },
   { nom: "La Grande Maison (Robuchon)", lat: 44.8380, lng: -0.5820, type: "Restaurant gastronomique ⭐⭐", color: "#4a7c59" },
-  { nom: "Bio c' Bon — Bordeaux Chartrons", lat: 44.8480, lng: -0.5730, type: "Épicerie bio", color: "#52b788" },
-  { nom: "Biocoop Bordeaux Saint-Michel", lat: 44.8330, lng: -0.5620, type: "Magasin bio circuit court", color: "#52b788" },
-  { nom: "L'Épicerie Fine Bordeaux", lat: 44.8390, lng: -0.5750, type: "Épicerie fine CSP+", color: "#52b788" },
+  { nom: "Les Récoltants", lat: 44.8372, lng: -0.5704, type: "Restaurant bistronomique — produits de ferme", color: "#4a7c59" },
+  { nom: "Berthus", lat: 44.8393, lng: -0.5707, type: "Restaurant bistronomique — cuisine du marché", color: "#4a7c59" },
+  { nom: "Accalmie Café", lat: 44.8519, lng: -0.5712, type: "Café / brunch — produits locaux", color: "#4a7c59" },
+  { nom: "Luna — Bistrot contemporain Chartrons", lat: 44.8520, lng: -0.5751, type: "Restaurant bistronomique ⭐", color: "#4a7c59" },
+  { nom: "La Fine Bouche", lat: 44.8361, lng: -0.5769, type: "Restaurant gastronomique — cuisine du marché", color: "#4a7c59" },
+  { nom: "Le Pavillon des Boulevards ⭐", lat: 44.8533, lng: -0.5928, type: "Restaurant gastronomique étoilé Michelin", color: "#4a7c59" },
+  { nom: "Sens Bistrot Contemporain", lat: 44.8421, lng: -0.5991, type: "Restaurant bistronomique", color: "#4a7c59" },
+  { nom: "Passage Secret", lat: 44.8423, lng: -0.5763, type: "Restaurant gastronomique", color: "#4a7c59" },
+  // Biocoop
+  { nom: "Biocoop Bordeaux Victoire", lat: 44.8300, lng: -0.5729, type: "Magasin bio circuit court", color: "#52b788" },
+  { nom: "Biocoop Bordeaux Judaïque", lat: 44.8416, lng: -0.5825, type: "Magasin bio circuit court", color: "#52b788" },
+  { nom: "Biocoop Bordeaux La Bastide", lat: 44.8411, lng: -0.5614, type: "Magasin bio circuit court", color: "#52b788" },
+  { nom: "Biocoop Caudéran", lat: 44.8522, lng: -0.6084, type: "Magasin bio circuit court", color: "#52b788" },
+  { nom: "Biocoop Chartrons (Rue Sicard)", lat: 44.8520, lng: -0.5727, type: "Magasin bio circuit court", color: "#52b788" },
+  // Bio c'Bon
+  { nom: "Bio c'Bon Victor Hugo", lat: 44.8353, lng: -0.5708, type: "Épicerie bio", color: "#52b788" },
+  { nom: "Bio c'Bon Fondaudège", lat: 44.8485, lng: -0.5830, type: "Épicerie bio", color: "#52b788" },
+  { nom: "Bio c'Bon Notre-Dame", lat: 44.8520, lng: -0.5712, type: "Épicerie bio", color: "#52b788" },
+  // Épiceries locales / vrac
+  { nom: "Le Cabas de Lola", lat: 44.8481, lng: -0.5817, type: "Épicerie locale — produits du terroir girondins", color: "#52b788" },
+  { nom: "La Recharge", lat: 44.8372, lng: -0.5712, type: "Épicerie vrac & circuit court", color: "#52b788" },
+  { nom: "Le Dépanneur du Coin", lat: 44.8324, lng: -0.6123, type: "Épicerie locale — produits locaux", color: "#52b788" },
+  { nom: "Maison Hegara", lat: 44.8525, lng: -0.5732, type: "Épicerie fine — producteurs locaux", color: "#52b788" },
 ];
 
 const MARCHES = [
   { nom: "Marché des Capucins", lat: 44.8325, lng: -0.5688, freq: "Quotidien", type: "Marché emblématique gastronomie bordelaise", color: "#457b9d" },
+  { nom: "Marché des Quais (Chartrons)", lat: 44.8532, lng: -0.5668, freq: "Dimanche matin", type: "Marché sur les quais — produits locaux & artisanaux", color: "#457b9d" },
   { nom: "Marché Saint-Seurin", lat: 44.8420, lng: -0.5870, freq: "Vendredi matin", type: "Producteurs bio et du terroir", color: "#457b9d" },
   { nom: "Marché Pey Berland", lat: 44.8370, lng: -0.5780, freq: "Mercredi + dimanche", type: "Marché producteurs — terroir local", color: "#457b9d" },
   { nom: "Marché Saint-Augustin", lat: 44.8280, lng: -0.5970, freq: "Mercredi + samedi", type: "Producteurs locaux", color: "#457b9d" },
   { nom: "Marché Bourrec (Pessac)", lat: 44.8090, lng: -0.6310, freq: "Hebdomadaire", type: "Alimentation locale et régionale", color: "#457b9d" },
+  { nom: "Marché de Migron (Eysines)", lat: 44.8685, lng: -0.6352, freq: "Dimanche matin", type: "Marché local — fruits, légumes, producteurs", color: "#457b9d" },
+  { nom: "Marché de Bruges", lat: 44.8817, lng: -0.6129, freq: "Vendredi + samedi", type: "Marché traditionnel — alimentaire et producteurs bio", color: "#457b9d" },
+  { nom: "Marché de Mérignac Centre", lat: 44.8412, lng: -0.6467, freq: "Mercredi + samedi", type: "Marché centre-ville — produits locaux", color: "#457b9d" },
+  { nom: "Marché en plein air de Cenon", lat: 44.8569, lng: -0.5206, freq: "Mercredi matin", type: "Marché rive droite — alimentation locale", color: "#457b9d" },
+  { nom: "Marché Producteurs Le Haillan", lat: 44.8937, lng: -0.6709, freq: "3e samedi du mois", type: "Marché de producteurs 100% local — légumes, viande, miel", color: "#457b9d" },
 ];
 
 // ══════════════════════════════════════════════════════
