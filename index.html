@@ -221,6 +221,10 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
         Concurrent médicinal / déshydraté (France)
       </div>
       <div class="leg-item">
+        <div class="leg-circle" style="background:#c0392b"></div>
+        Concurrent européen ou asiatique (import)
+      </div>
+      <div class="leg-item">
         <div class="leg-circle" style="background:#9b72cf"></div>
         Concurrent / Partenaire potentiel
       </div>
@@ -282,6 +286,7 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
     <div class="view-toggle">
       <button class="vbtn on" id="vbm" onclick="flyTo('metropole')">Métropole</button>
       <button class="vbtn"    id="vbg" onclick="flyTo('gironde')">Gironde</button>
+      <button class="vbtn"    id="vbe" onclick="flyTo('europe')">Europe</button>
     </div>
   </div>
 </div>
@@ -378,6 +383,58 @@ const CONCURRENTS = [
     prix: "Bio premium",
     menace: "Concurrent potentiel sur réseau bio — partenaire possible à terme",
     color: "#e76f51"
+  },
+  {
+    nom: "Les Myconautes & Champiloop (Grenoble)",
+    lat: 45.1885, lng: 5.7245,
+    type: "Concurrent médicinal France",
+    produits: "Champignons médicinaux déshydratés & frais — Reishi, Lion's mane, Shiitake",
+    circuit: "Vente directe, marchés bio, e-commerce — rayonnement régional Auvergne-Rhône-Alpes",
+    prix: "Premium local",
+    menace: "Concurrent direct sur le segment médicinal déshydraté — présence forte en circuits bio",
+    color: "#e76f51"
+  },
+  {
+    nom: "La Boîte à Champignon (Paris)",
+    lat: 48.8566, lng: 2.3522,
+    type: "Concurrent médicinal France — e-commerce national",
+    produits: "Champignons médicinaux déshydratés, poudres, kits de culture — Reishi, Lion's mane, Shiitake",
+    circuit: "E-commerce national, épiceries fines Paris, réseau CHR parisien",
+    prix: "Premium — 20–35 €/50g",
+    menace: "Fort sur e-commerce national — pas de production locale revendiquée comme avantage",
+    color: "#e76f51"
+  },
+  {
+    nom: "La Cave Agricole — Paris & Lyon",
+    lat: 48.8740, lng: 2.3470,
+    type: "Concurrent / Partenaire potentiel — réseau multi-sites",
+    produits: "Champignons frais bio (Paris, Lyon, Lormont) — production urbaine en cave",
+    circuit: "Restaurateurs, épiceries bio, Drive Fermier, réseaux locaux",
+    prix: "NC",
+    menace: "Modèle multi-implantations à surveiller — champignons frais uniquement, hors segment médicinal déshydraté",
+    color: "#9b72cf"
+  },
+  // Concurrents européens (Pologne / Allemagne)
+  {
+    nom: "Concurrents polonais & allemands",
+    lat: 52.0000, lng: 16.0000,
+    type: "Concurrents européens — production industrielle",
+    produits: "Champignons médicinaux déshydratés & extraits en volume — Reishi, Lion's mane, Cordyceps",
+    circuit: "Grossistes, façonniers européens, e-commerce B2B — prix très compétitifs",
+    prix: "5–20 €/kg (vrac industriel)",
+    menace: "Pression prix forte sur le segment façonniers — principal argument différenciant Synapse : origine France + traçabilité",
+    color: "#c0392b"
+  },
+  // Concurrents asiatiques
+  {
+    nom: "Concurrents asiatiques (Chine / Corée)",
+    lat: 35.0000, lng: 108.0000,
+    type: "Concurrents asiatiques — importateurs dominants",
+    produits: "Poudres & extraits de champignons médicinaux en masse — Reishi, Lion's mane, Chaga, Cordyceps",
+    circuit: "Importateurs grossistes, façonniers européens, e-commerce low-cost",
+    prix: "3–15 €/kg (vrac) — dumping prix fréquent",
+    menace: "Dominent 95% du marché européen — risques qualité (métaux lourds, mycotoxines, falsification taux principes actifs) = argument Synapse",
+    color: "#c0392b"
   },
   // Partenaires stratégiques
   {
@@ -570,11 +627,14 @@ function drawSites() {
 // ── Concurrents ───────────────────────────────────────
 function drawConcurrents() {
   CONCURRENTS.forEach(c => {
-    L.marker([c.lat, c.lng], { icon: makeIcon(c.color, '⚠️', 12) })
+    const isMacro = c.color === '#c0392b';
+    const emoji = isMacro ? '🌏' : '⚠️';
+    const size = isMacro ? 14 : 12;
+    L.marker([c.lat, c.lng], { icon: makeIcon(c.color, emoji, size) })
       .addTo(map)
       .bindPopup(`
-        <div class="pp-head" style="background:#5c4a1e">
-          <div class="pp-icon" style="background:${c.color}">⚠️</div>
+        <div class="pp-head" style="background:${isMacro ? '#7b1a1a' : '#5c4a1e'}">
+          <div class="pp-icon" style="background:${c.color}">${emoji}</div>
           <div>
             <div class="pp-name">${c.nom}</div>
             <div class="pp-sub">${c.type}</div>
@@ -585,8 +645,8 @@ function drawConcurrents() {
           <div class="pp-row"><span class="pp-lbl">Circuit</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:130px">${c.circuit}</span></div>
           <div class="pp-row"><span class="pp-lbl">Prix</span><span class="pp-val">${c.prix}</span></div>
           <div class="pp-row"><span class="pp-lbl">Menace</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:130px">${c.menace}</span></div>
-          <span class="pp-tag" style="background:${c.color}">Concurrent</span>
-        </div>`, { maxWidth: 300 });
+          <span class="pp-tag" style="background:${c.color}">${isMacro ? 'Concurrent import' : 'Concurrent'}</span>
+        </div>`, { maxWidth: 320 });
   });
 }
 
@@ -694,11 +754,13 @@ function drawMarches() {
 function flyTo(v) {
   const views = {
     metropole: { center: [44.863, -0.560], zoom: 10 },
-    gironde:   { center: [44.800, -0.500], zoom:  8 }
+    gironde:   { center: [44.800, -0.500], zoom:  8 },
+    europe:    { center: [48.000, 10.000], zoom:  4 }
   };
   map.flyTo(views[v].center, views[v].zoom, { duration: 0.7 });
   document.getElementById('vbm').classList.toggle('on', v === 'metropole');
   document.getElementById('vbg').classList.toggle('on', v === 'gironde');
+  document.getElementById('vbe').classList.toggle('on', v === 'europe');
   setTimeout(() => map.invalidateSize(), 100);
 }
 
