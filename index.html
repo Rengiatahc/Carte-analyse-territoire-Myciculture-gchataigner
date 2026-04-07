@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Analyse du territoire - Ferme mycicole</title>
+<title>Synapse Mush Farm — Cartographie territoire</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -12,9 +12,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --earth:  #3a4d25;
-  --wheat:  #9aa873;
-  --sage:   #647642;
+  --earth:  #2e1f0e;
+  --wheat:  #c8a84b;
+  --sage:   #6b7c5c;
   --cream:  #f5f0e8;
   --moss:   #3d5c2a;
   --header-h: 56px;
@@ -175,8 +175,8 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
 <div id="header">
   <div class="logo">
     <div class="logo-icon">🍄</div>
-    Analyse du territoire — Ferme mycicole
-    <span class="logo-sub">BPREA 2026 — Grégoire Chataigner</span>
+    Synapse Mush Farm — Cartographie territoire
+    <span class="logo-sub">BPREA 2026 · Beychac-et-Caillau</span>
   </div>
 
 </div>
@@ -203,26 +203,10 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
     </div>
 
     <div class="leg-section">
-      <div class="leg-title">Sites de production pressentis</div>
+      <div class="leg-title">Site de production</div>
       <div class="leg-item">
-        <div class="leg-circle" style="background:#e76f51"></div>
-        Blanquefort — zone maraîchère nord
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#e76f51"></div>
-        Mérignac — zone activités ouest
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#e76f51"></div>
-        Lormont / Cenon — rive droite
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#e76f51"></div>
-        Bassin à Flot / Base sous-marine
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#e76f51"></div>
-        Benauge / Grand Parc
+        <div class="leg-circle" style="background:#2C5F2D"></div>
+        Beychac-et-Caillau — Site retenu ✓
       </div>
     </div>
 
@@ -230,43 +214,39 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <div class="leg-title">Concurrents & Partenaires potentiels</div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#c8a84b"></div>
-        La Champignonne (Bacalan) — Concurrent direct
+        Concurrent direct local (champignons frais)
+      </div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#e76f51"></div>
+        Concurrent médicinal / déshydraté (France)
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#9b72cf"></div>
-        La Cave Agricole (Lormont)
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#9b72cf"></div>
-        Les Champis d'Entre-Deux-Mers (Lugasson)
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#9b72cf"></div>
-        Les Champignons de Lucille (St-Germain)
-      </div>
-      <div class="leg-item">
-        <div class="leg-circle" style="background:#9b72cf"></div>
-        If Champignons d'Aquitaine (Port-Ste-Marie)
+        Concurrent / Partenaire potentiel
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#4a7c59"></div>
-        Château Angélus — Partenaire stratégique
+        Partenaire stratégique
       </div>
     </div>
 
     <div class="leg-section">
-      <div class="leg-title">Clients cibles HoReCa</div>
+      <div class="leg-title">Clients cibles BtoB</div>
       <div class="leg-item">
-        <div class="leg-circle" style="background:#4a7c59"></div>
-        Restaurant (gastronomique / bistronomique)
+        <div class="leg-circle" style="background:#1d6a8a"></div>
+        Façonnier compléments alimentaires
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#52b788"></div>
-        Épicerie fine, bio, vrac & circuit court
+        Naturopathe / Prescripteur bien-être
       </div>
       <div class="leg-item">
-        <div class="leg-circle" style="background:#7b5ea7"></div>
-        Hôtellerie haut de gamme & spa
+        <div class="leg-circle" style="background:#4a7c59"></div>
+        Restaurant gastronomique / HoReCa
+      </div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#76b39d"></div>
+        Épicerie fine, bio, vrac & circuit court
       </div>
     </div>
 
@@ -274,10 +254,24 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <div class="leg-title">Marchés de producteurs</div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#457b9d"></div>
-        Marché de plein air
+        Marché de plein air / producteurs
       </div>
     </div>
 
+    <div class="leg-section">
+      <div class="leg-title">Hôtellerie haut de gamme</div>
+      <div class="leg-item">
+        <div class="leg-circle" style="background:#7b5ea7"></div>
+        Hôtel & spa ★★★★/★★★★★
+      </div>
+    </div>
+
+    <div class="leg-note">
+      🍄 <strong>Synapse Mush Farm</strong><br>
+      Hangar 500 m² · Beychac-et-Caillau (33)<br>
+      15 min de Bordeaux · Production Reishi & Lion's mane<br>
+      200 kg déshydratés/mois · BtoB + BtoC
+    </div>
 
   </div>
 
@@ -297,150 +291,156 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
 // DONNÉES
 // ══════════════════════════════════════════════════════
 
+// ── Site de production retenu ─────────────────────────
 const SITES_PRODUCTION = [
   {
-    nom: "Site pressenti — Blanquefort",
-    lat: 44.9124, lng: -0.6374,
-    statut: "Pressenti",
-    atouts: "Zone maraîchère nord-métropole, foncier disponible, proximité axe Bordeaux-Médoc",
-    surface: "500–1 000 m² couverts envisagés",
-    acces: "RD210 — 15 min Bordeaux centre",
-    contact: "Bordeaux Métropole / Terre de Liens",
-    color: "#e76f51"
-  },
-  {
-    nom: "Site pressenti — Mérignac",
-    lat: 44.8350, lng: -0.6650,
-    statut: "Pressenti",
-    atouts: "Proximité zone activités, accès aéroport, logistique facilitée, foncier accessible",
-    surface: "À définir — locaux activités disponibles",
-    acces: "Rocade sortie Mérignac — 10 min Bordeaux centre",
-    contact: "Bordeaux Métropole",
-    color: "#e76f51"
-  },
-  {
-    nom: "Site pressenti — Lormont / Cenon",
-    lat: 44.8750, lng: -0.5160,
-    statut: "Pressenti",
-    atouts: "Rive droite en pleine mutation urbaine, projets agricoles périurbains actifs, proximité immédiate Bordeaux",
-    surface: "À définir — friches urbaines et zones activités",
-    acces: "Pont d'Aquitaine — 5 min Bordeaux centre",
-    contact: "Bordeaux Métropole / Mairies Lormont & Cenon",
-    color: "#e76f51"
-  },
-  {
-    nom: "Site pressenti — Bassin à Flot / Base sous-marine",
-    lat: 44.8705, lng: -0.5597,
-    statut: "Pressenti",
-    atouts: "Quartier en forte reconversion urbaine, espaces industriels réhabilités, flux touristique (Base sous-marine), logistique fluviale",
-    surface: "Entrepôts / ateliers à qualifier — Bd Alfred Daney",
-    acces: "5 min centre Bordeaux — tram ligne C",
-    contact: "Bordeaux Métropole / Agence de développement Bassins à flot",
-    color: "#e76f51"
-  },
-  {
-    nom: "Site pressenti — Quartier Benauge / Grand Parc",
-    lat: 44.8577, lng: -0.5821,
-    statut: "Pressenti",
-    atouts: "Quartier populaire en rénovation, tissu associatif fort, insertion par l'activité économique possible, locaux disponibles",
-    surface: "Locaux associatifs / ateliers à qualifier",
-    acces: "Bordeaux Nord — 10 min centre",
-    contact: "Bordeaux Métropole / Mairie de Bordeaux",
-    color: "#e76f51"
+    nom: "Synapse Mush Farm — Beychac-et-Caillau",
+    lat: 44.8720, lng: -0.4580,
+    statut: "Site retenu ✓",
+    atouts: "Hangar 500 m² disponible, 15 min Bordeaux, accès A89/RD936, zone logistique idéale, livraison J+1 Bordeaux Métropole",
+    surface: "500 m² couverts",
+    acces: "A89 sortie 1 — 15 min Bordeaux centre",
+    contact: "Synapse Mush Farm — contact@synapsemushfarm.fr",
+    color: "#2C5F2D"
   }
 ];
 
+// ── Concurrents ───────────────────────────────────────
 const CONCURRENTS = [
+  // Concurrents directs locaux (champignons frais)
   {
-    nom: "La Champignonne",
+    nom: "La Champignonne (Bacalan)",
     lat: 44.8620, lng: -0.5680,
-    type: "Concurrent direct",
-    produits: "Pleurotes (gris, rose, jaune), shiitake",
+    type: "Concurrent direct local",
+    produits: "Pleurotes (gris, rose, jaune), shiitake — champignons frais",
     circuit: "Boutique directe, marché Bruges, vente en ligne",
     prix: "12–18 €/kg",
-    menace: "Concurrent direct — seul acteur local identifié",
+    menace: "Concurrent frais uniquement — pas sur le segment médicinal déshydraté",
     color: "#c8a84b"
   },
   {
-    nom: "La Cave Agricole (Cycloponics)",
+    nom: "La Cave Agricole / Cycloponics (Lormont)",
     lat: 44.8837, lng: -0.5300,
     type: "Concurrent / Partenaire potentiel",
     produits: "Champignon de Paris bio, pleurotes, shiitake, endives",
-    circuit: "Restaurateurs Gironde, épiceries bio, Too Good To Go, La Ruche, Drive Fermier",
+    circuit: "Restaurateurs Gironde, épiceries bio, Too Good To Go, Drive Fermier",
     prix: "NC",
-    menace: "Proximité Lormont — à qualifier",
+    menace: "Champignons frais uniquement — partenariat filière possible",
     color: "#9b72cf"
   },
   {
-    nom: "Les Champis d'Entre-Deux-Mers",
-    lat: 44.7512, lng: -0.1595,
+    nom: "Les Champis d'Entre-Deux-Mers (Lugasson)",
+    lat: 44.6900, lng: -0.2800,
     type: "Concurrent / Partenaire potentiel",
     produits: "Champignons frais",
-    circuit: "Circuit court local — à qualifier",
+    circuit: "Circuit court local",
     prix: "NC",
     menace: "Zone complémentaire — partenariat filière possible",
     color: "#9b72cf"
   },
   {
-    nom: "Les Champignons de Lucille",
-    lat: 44.9506, lng: -0.3334,
+    nom: "Les Champignons de Lucille (St-Germain-du-Puch)",
+    lat: 44.8700, lng: -0.3200,
     type: "Concurrent / Partenaire potentiel",
-    produits: "Champignons frais",
-    circuit: "Vente directe — à qualifier",
+    produits: "Champignons frais — proche zone Synapse",
+    circuit: "Vente directe circuit court",
     prix: "NC",
     menace: "Faible — partenariat filière possible",
     color: "#9b72cf"
   },
   {
-    nom: "If Champignons d'Aquitaine",
+    nom: "If Champignons d'Aquitaine (Port-Ste-Marie)",
     lat: 44.1500, lng: 0.2700,
     type: "Concurrent / Partenaire potentiel",
     produits: "Pleurotes, shiitake — substrats paille/blé/seigle",
-    circuit: "Marché Nérac, Biocoop, La Ruche, vente directe, substrats à la vente",
+    circuit: "Marché Nérac, Biocoop, La Ruche, vente directe",
     prix: "NC",
     menace: "Éloigné (~100 km) — mutualisation substrat possible",
     color: "#9b72cf"
   },
+  // Concurrents médicinaux / déshydratés France
   {
-    nom: "Château Angélus",
-    lat: 44.8930, lng: -0.1717,
+    nom: "La Villa Hélène (Haute-Vienne, 87)",
+    lat: 45.8353, lng: 1.2625,
+    type: "Concurrent médicinal France",
+    produits: "Champignons médicinaux déshydratés — Reishi, Lion's mane, Cordyceps",
+    circuit: "E-commerce, vente directe, quelques marchés bio",
+    prix: "Premium — 28–40 €/50g",
+    menace: "Concurrent direct sur segment déshydraté FR — modèle de référence traçabilité intégrale",
+    color: "#e76f51"
+  },
+  {
+    nom: "La Mycosphère (franco-belge — Nouvelle-Aquitaine)",
+    lat: 45.1800, lng: -0.0200,
+    type: "Concurrent médicinal / Partenaire possible",
+    produits: "Champignons bio premium — présent sur 20+ marchés",
+    circuit: "Marchés bio, e-commerce, réseau épiceries — hors Gironde actuellement",
+    prix: "Bio premium",
+    menace: "Concurrent potentiel sur réseau bio — partenaire possible à terme",
+    color: "#e76f51"
+  },
+  // Partenaires stratégiques
+  {
+    nom: "Château Angélus (Saint-Émilion)",
+    lat: 44.8940, lng: -0.0620,
     type: "Partenaire stratégique",
     produits: "Réseau gastronomique & œnotouristique premium",
     circuit: "Œnotourisme haut de gamme, réseau chefs étoilés",
     prix: "—",
-    menace: "Allié stratégique — réseau direct",
+    menace: "Allié stratégique — réseau direct grands chefs",
     color: "#4a7c59"
   }
 ];
 
+// ── Clients BtoB — Façonniers ─────────────────────────
+const CLIENTS_FACONNIERS = [
+  { nom: "Phyt'Inov (Agen, 47)", lat: 44.2040, lng: 0.6200, type: "Façonnier compléments alimentaires — potentiel contrat 150 kg/mois", color: "#1d6a8a" },
+  { nom: "Nutraceutics (Bordeaux Métropole)", lat: 44.8900, lng: -0.5400, type: "Façonnier / distributeur compléments — Gironde", color: "#1d6a8a" },
+  { nom: "Léa Nature / So'Bio (Périgny, 17)", lat: 46.0800, lng: -1.0900, type: "Groupe bio — marques So'Bio, Jardin Bio — façonnier potentiel premium", color: "#1d6a8a" },
+  { nom: "Naturex / Givaudan (Avignon, 84)", lat: 43.9493, lng: 4.8059, type: "Leader extraits naturels — acheteur potentiel poudres certifiées", color: "#1d6a8a" },
+  { nom: "Arom Nat (Toulouse, 31)", lat: 43.6047, lng: 1.4442, type: "Façonnier compléments alimentaires Occitanie", color: "#1d6a8a" },
+];
+
+// ── Clients BtoB — Naturopathes / Prescripteurs ───────
+const CLIENTS_NATURO = [
+  { nom: "Cabinet naturopathie — Chartrons", lat: 44.8530, lng: -0.5760, type: "Naturopathe — prescripteur bien-être", color: "#52b788" },
+  { nom: "Cabinet naturopathie — Caudéran", lat: 44.8520, lng: -0.6000, type: "Naturopathe — prescripteur bien-être", color: "#52b788" },
+  { nom: "Cabinet naturopathie — Saint-Pierre", lat: 44.8395, lng: -0.5700, type: "Naturopathe — prescripteur bien-être", color: "#52b788" },
+  { nom: "Cabinet naturopathie — Talence", lat: 44.8038, lng: -0.5950, type: "Naturopathe / diététicienne — prescripteur", color: "#52b788" },
+  { nom: "Espace bien-être — Mériadeck", lat: 44.8410, lng: -0.5820, type: "Centre bien-être & naturopathie", color: "#52b788" },
+  { nom: "Cabinet naturopathie — Pessac", lat: 44.8050, lng: -0.6300, type: "Naturopathe — prescripteur bien-être", color: "#52b788" },
+  { nom: "Espace bien-être — Libourne", lat: 44.9200, lng: -0.2400, type: "Centre naturopathie & compléments", color: "#52b788" },
+  { nom: "Naturopathe — Mérignac", lat: 44.8350, lng: -0.6450, type: "Naturopathe — prescripteur bien-être", color: "#52b788" },
+];
+
+// ── Clients HoReCa ─────────────────────────────────────
 const CLIENTS_HORECA = [
-  // Restaurants
   { nom: "Le Pressoir d'Argent (Gordon Ramsay)", lat: 44.8415, lng: -0.5723, type: "Restaurant gastronomique ⭐⭐", color: "#4a7c59" },
   { nom: "Le Prince Noir", lat: 44.8680, lng: -0.5195, type: "Restaurant gastronomique ⭐", color: "#4a7c59" },
   { nom: "La Grande Maison (Robuchon)", lat: 44.8380, lng: -0.5820, type: "Restaurant gastronomique ⭐⭐", color: "#4a7c59" },
   { nom: "Les Récoltants", lat: 44.8372, lng: -0.5704, type: "Restaurant bistronomique — produits de ferme", color: "#4a7c59" },
   { nom: "Berthus", lat: 44.8393, lng: -0.5707, type: "Restaurant bistronomique — cuisine du marché", color: "#4a7c59" },
-  { nom: "Accalmie Café", lat: 44.8519, lng: -0.5712, type: "Café / brunch — produits locaux", color: "#4a7c59" },
-  { nom: "Luna — Bistrot contemporain Chartrons", lat: 44.8520, lng: -0.5751, type: "Restaurant bistronomique ⭐", color: "#4a7c59" },
   { nom: "La Fine Bouche", lat: 44.8361, lng: -0.5769, type: "Restaurant gastronomique — cuisine du marché", color: "#4a7c59" },
   { nom: "Le Pavillon des Boulevards ⭐", lat: 44.8533, lng: -0.5928, type: "Restaurant gastronomique étoilé Michelin", color: "#4a7c59" },
+  { nom: "Accalmie Café", lat: 44.8519, lng: -0.5712, type: "Café / brunch — produits locaux", color: "#4a7c59" },
+  { nom: "Luna — Bistrot contemporain Chartrons", lat: 44.8520, lng: -0.5751, type: "Restaurant bistronomique ⭐", color: "#4a7c59" },
   { nom: "Sens Bistrot Contemporain", lat: 44.8421, lng: -0.5991, type: "Restaurant bistronomique", color: "#4a7c59" },
-  { nom: "Passage Secret", lat: 44.8423, lng: -0.5763, type: "Restaurant gastronomique", color: "#4a7c59" },
-  // Biocoop
-  { nom: "Biocoop Bordeaux Victoire", lat: 44.8300, lng: -0.5729, type: "Magasin bio circuit court", color: "#52b788" },
-  { nom: "Biocoop Bordeaux Judaïque", lat: 44.8416, lng: -0.5825, type: "Magasin bio circuit court", color: "#52b788" },
-  { nom: "Biocoop Bordeaux La Bastide", lat: 44.8411, lng: -0.5614, type: "Magasin bio circuit court", color: "#52b788" },
-  { nom: "Biocoop Caudéran", lat: 44.8522, lng: -0.6084, type: "Magasin bio circuit court", color: "#52b788" },
-  { nom: "Biocoop Chartrons (Rue Sicard)", lat: 44.8520, lng: -0.5727, type: "Magasin bio circuit court", color: "#52b788" },
-  // Bio c'Bon
-  { nom: "Bio c'Bon Victor Hugo", lat: 44.8353, lng: -0.5708, type: "Épicerie bio", color: "#52b788" },
-  { nom: "Bio c'Bon Fondaudège", lat: 44.8485, lng: -0.5830, type: "Épicerie bio", color: "#52b788" },
-  { nom: "Bio c'Bon Notre-Dame", lat: 44.8520, lng: -0.5712, type: "Épicerie bio", color: "#52b788" },
-  // Épiceries locales / vrac
-  { nom: "Le Cabas de Lola", lat: 44.8481, lng: -0.5817, type: "Épicerie locale — produits du terroir girondins", color: "#52b788" },
-  { nom: "La Recharge", lat: 44.8372, lng: -0.5712, type: "Épicerie vrac & circuit court", color: "#52b788" },
-  { nom: "Le Dépanneur du Coin", lat: 44.8324, lng: -0.6123, type: "Épicerie locale — produits locaux", color: "#52b788" },
-  { nom: "Maison Hegara", lat: 44.8525, lng: -0.5732, type: "Épicerie fine — producteurs locaux", color: "#52b788" },
+  // Épiceries & magasins bio
+  { nom: "Biocoop Bordeaux Victoire", lat: 44.8300, lng: -0.5729, type: "Magasin bio circuit court", color: "#76b39d" },
+  { nom: "Biocoop Bordeaux Judaïque", lat: 44.8416, lng: -0.5825, type: "Magasin bio circuit court", color: "#76b39d" },
+  { nom: "Biocoop Bordeaux La Bastide", lat: 44.8411, lng: -0.5614, type: "Magasin bio circuit court", color: "#76b39d" },
+  { nom: "Biocoop Caudéran", lat: 44.8522, lng: -0.6084, type: "Magasin bio circuit court", color: "#76b39d" },
+  { nom: "Biocoop Chartrons (Rue Sicard)", lat: 44.8520, lng: -0.5727, type: "Magasin bio circuit court", color: "#76b39d" },
+  { nom: "Bio c'Bon Victor Hugo", lat: 44.8353, lng: -0.5708, type: "Épicerie bio", color: "#76b39d" },
+  { nom: "Bio c'Bon Fondaudège", lat: 44.8485, lng: -0.5830, type: "Épicerie bio", color: "#76b39d" },
+  { nom: "Le Cabas de Lola", lat: 44.8481, lng: -0.5817, type: "Épicerie locale — produits du terroir girondins", color: "#76b39d" },
+  { nom: "La Recharge", lat: 44.8372, lng: -0.5712, type: "Épicerie vrac & circuit court", color: "#76b39d" },
+  { nom: "Maison Hegara", lat: 44.8525, lng: -0.5732, type: "Épicerie fine — producteurs locaux", color: "#76b39d" },
+  // Magasins bien-être & compléments
+  { nom: "Naturalia Bordeaux Centre", lat: 44.8440, lng: -0.5750, type: "Magasin bien-être & compléments alimentaires", color: "#76b39d" },
+  { nom: "Comptoir des Plantes (Bordeaux)", lat: 44.8390, lng: -0.5780, type: "Herboristerie & compléments naturels", color: "#76b39d" },
+  { nom: "Biosainté (Mérignac)", lat: 44.8360, lng: -0.6480, type: "Magasin bien-être & compléments alimentaires", color: "#76b39d" },
+  { nom: "Biomonde Pessac", lat: 44.8080, lng: -0.6300, type: "Magasin bio & bien-être", color: "#76b39d" },
 ];
 
 const MARCHES = [
@@ -450,22 +450,18 @@ const MARCHES = [
   { nom: "Marché Pey Berland", lat: 44.8370, lng: -0.5780, freq: "Mercredi + dimanche", type: "Marché producteurs — terroir local", color: "#457b9d" },
   { nom: "Marché Saint-Augustin", lat: 44.8280, lng: -0.5970, freq: "Mercredi + samedi", type: "Producteurs locaux", color: "#457b9d" },
   { nom: "Marché Bourrec (Pessac)", lat: 44.8090, lng: -0.6310, freq: "Hebdomadaire", type: "Alimentation locale et régionale", color: "#457b9d" },
-  { nom: "Marché de Migron (Eysines)", lat: 44.8685, lng: -0.6352, freq: "Dimanche matin", type: "Marché local — fruits, légumes, producteurs", color: "#457b9d" },
   { nom: "Marché de Bruges", lat: 44.8817, lng: -0.6129, freq: "Vendredi + samedi", type: "Marché traditionnel — alimentaire et producteurs bio", color: "#457b9d" },
   { nom: "Marché de Mérignac Centre", lat: 44.8412, lng: -0.6467, freq: "Mercredi + samedi", type: "Marché centre-ville — produits locaux", color: "#457b9d" },
-  { nom: "Marché en plein air de Cenon", lat: 44.8569, lng: -0.5206, freq: "Mercredi matin", type: "Marché rive droite — alimentation locale", color: "#457b9d" },
-  { nom: "Marché Producteurs Le Haillan", lat: 44.8937, lng: -0.6709, freq: "3e samedi du mois", type: "Marché de producteurs 100% local — légumes, viande, miel", color: "#457b9d" },
+  { nom: "Marché Producteurs Le Haillan", lat: 44.8937, lng: -0.6709, freq: "3e samedi du mois", type: "Marché de producteurs 100% local", color: "#457b9d" },
+  { nom: "Marché de Beychac-et-Caillau", lat: 44.8700, lng: -0.4620, freq: "Hebdomadaire", type: "Marché local — porte de la ferme Synapse", color: "#457b9d" },
 ];
 
 const HOTELS = [
-  { nom: "Mondrian Bordeaux Les Carmes", lat: 44.8599, lng: -0.5683, type: "Hôtel design 5★ — Bassin à flot, clientèle internationale", color: "#7b5ea7" },
-  { nom: "InterContinental Bordeaux — Le Grand Hôtel", lat: 44.8424, lng: -0.5747, type: "Palace 5★ — Place de la Comédie, spa Guerlain, restaurant étoilé", color: "#7b5ea7" },
-  { nom: "Villas Foch", lat: 44.8473, lng: -0.5754, type: "Boutique hôtel 5★ — Spa, sauna, piscine, clientèle CSP+ premium", color: "#7b5ea7" },
-  { nom: "Hôtel Le Palais Gallien", lat: 44.8460, lng: -0.5841, type: "Hôtel boutique 5★ — Jardin, ambiance raffinée, clientèle CSP+", color: "#7b5ea7" },
-  { nom: "Maison Pavlov (Le Bouscat)", lat: 44.8625, lng: -0.6015, type: "Boutique hôtel spa ★★★★ — Restaurant gastronomique, clientèle affaires & loisirs", color: "#7b5ea7" },
-  { nom: "Villa Margaux & Spa (Fargues-St-Hilaire)", lat: 44.8214, lng: -0.4425, type: "Maison d'hôtes & spa privatif ★★★★ — Jacuzzi, wellness, œnotourisme", color: "#7b5ea7" },
-  { nom: "Les Criquets Hôtel Spa (Blanquefort)", lat: 44.9153, lng: -0.6274, type: "Hôtel spa ★★★★ — Piscine, massages, proche zone maraîchère nord", color: "#7b5ea7" },
-  { nom: "Château Grand Barrail & Spa (Saint-Émilion)", lat: 44.9091, lng: -0.1919, type: "Château hôtel spa ★★★★★ — Œnotourisme, restaurant gastronomique, clientèle internationale", color: "#7b5ea7" },
+  { nom: "InterContinental Bordeaux — Le Grand Hôtel", lat: 44.8424, lng: -0.5747, type: "Palace 5★ — restaurant étoilé, spa Guerlain", color: "#7b5ea7" },
+  { nom: "Villas Foch", lat: 44.8473, lng: -0.5754, type: "Boutique hôtel 5★ — Spa, clientèle CSP+ premium", color: "#7b5ea7" },
+  { nom: "Hôtel Le Palais Gallien", lat: 44.8460, lng: -0.5841, type: "Hôtel boutique 5★ — Jardin, clientèle CSP+", color: "#7b5ea7" },
+  { nom: "Château Grand Barrail & Spa (Saint-Émilion)", lat: 44.9091, lng: -0.1919, type: "Château hôtel spa ★★★★★ — restaurant gastronomique, clientèle internationale", color: "#7b5ea7" },
+  { nom: "Villa Margaux & Spa (Fargues-St-Hilaire)", lat: 44.8214, lng: -0.4425, type: "Maison d'hôtes & spa ★★★★ — Jacuzzi, wellness, proche Beychac", color: "#7b5ea7" },
 ];
 
 // ══════════════════════════════════════════════════════
@@ -474,7 +470,7 @@ const HOTELS = [
 let map;
 
 window.addEventListener('load', () => {
-  map = L.map('map', { center: [44.863, -0.590], zoom: 11, zoomControl: true });
+  map = L.map('map', { center: [44.863, -0.560], zoom: 10, zoomControl: true });
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -487,6 +483,8 @@ window.addEventListener('load', () => {
   drawSites();
   drawConcurrents();
   drawClients();
+  drawFaconniers();
+  drawNaturo();
   drawMarches();
 });
 
@@ -541,30 +539,31 @@ function makeIcon(color, emoji, size = 14) {
 // ── Sites de production ───────────────────────────────
 function drawSites() {
   SITES_PRODUCTION.forEach(s => {
-    // Cercle de zone
+    // Cercle de zone pulsant (priorité)
     L.circle([s.lat, s.lng], {
-      radius: 600,
-      color: s.color, weight: 2, opacity: 0.8,
-      fillColor: s.color, fillOpacity: 0.12, dashArray: '6 4'
+      radius: 2000,
+      color: s.color, weight: 2.5, opacity: 0.7,
+      fillColor: s.color, fillOpacity: 0.10, dashArray: '8 5'
     }).addTo(map);
 
-    L.marker([s.lat, s.lng], { icon: makeIcon(s.color, '🏭', 13) })
+    L.marker([s.lat, s.lng], { icon: makeIcon(s.color, '🏭', 15) })
       .addTo(map)
       .bindPopup(`
-        <div class="pp-head" style="background:#2e1f0e">
-          <div class="pp-icon" style="background:${s.color}">🏭</div>
+        <div class="pp-head" style="background:#2C5F2D">
+          <div class="pp-icon" style="background:#97BC62">🏭</div>
           <div>
             <div class="pp-name">${s.nom}</div>
-            <div class="pp-sub">Site de production pressenti</div>
+            <div class="pp-sub">${s.statut}</div>
           </div>
         </div>
         <div class="pp-body">
-          <div class="pp-row"><span class="pp-lbl">Atouts</span><span class="pp-val" style="max-width:140px;text-align:right;font-size:.67rem">${s.atouts}</span></div>
+          <div class="pp-row"><span class="pp-lbl">Atouts</span><span class="pp-val" style="max-width:150px;text-align:right;font-size:.67rem">${s.atouts}</span></div>
           <div class="pp-row"><span class="pp-lbl">Surface</span><span class="pp-val">${s.surface}</span></div>
           <div class="pp-row"><span class="pp-lbl">Accès</span><span class="pp-val">${s.acces}</span></div>
           <div class="pp-row"><span class="pp-lbl">Contact</span><span class="pp-val" style="font-size:.67rem">${s.contact}</span></div>
-          <span class="pp-tag" style="background:${s.color}">À confirmer</span>
-        </div>`, { maxWidth: 300 });
+          <span class="pp-tag" style="background:#2C5F2D">✓ Site retenu</span>
+        </div>`, { maxWidth: 320 })
+      .openPopup();
   });
 }
 
@@ -591,23 +590,64 @@ function drawConcurrents() {
   });
 }
 
-// ── Clients HoReCa ────────────────────────────────────
+// ── Clients HoReCa & épiceries ────────────────────────
 function drawClients() {
   CLIENTS_HORECA.forEach(c => {
-    L.marker([c.lat, c.lng], { icon: makeIcon(c.color, c.color === '#4a7c59' ? '🍽️' : '🌿', 11) })
+    const isResto = c.color === '#4a7c59';
+    const emoji = isResto ? '🍽️' : '🌿';
+    L.marker([c.lat, c.lng], { icon: makeIcon(c.color, emoji, 11) })
       .addTo(map)
       .bindPopup(`
         <div class="pp-head" style="background:${c.color}">
-          <div class="pp-icon" style="background:rgba(255,255,255,.2)">${c.color === '#4a7c59' ? '🍽️' : '🌿'}</div>
+          <div class="pp-icon" style="background:rgba(255,255,255,.2)">${emoji}</div>
           <div>
             <div class="pp-name">${c.nom}</div>
             <div class="pp-sub">${c.type}</div>
           </div>
         </div>
         <div class="pp-body">
-          <div class="pp-row"><span class="pp-lbl">Segment</span><span class="pp-val" style="font-size:.67rem">${c.type}</span></div>
           <span class="pp-tag" style="background:${c.color}">Client cible</span>
         </div>`, { maxWidth: 260 });
+  });
+}
+
+// ── Clients façonniers ────────────────────────────────
+function drawFaconniers() {
+  CLIENTS_FACONNIERS.forEach(f => {
+    L.marker([f.lat, f.lng], { icon: makeIcon(f.color, '🏭', 12) })
+      .addTo(map)
+      .bindPopup(`
+        <div class="pp-head" style="background:#1d6a8a">
+          <div class="pp-icon" style="background:rgba(255,255,255,.2)">🏭</div>
+          <div>
+            <div class="pp-name">${f.nom}</div>
+            <div class="pp-sub">Façonnier compléments alimentaires</div>
+          </div>
+        </div>
+        <div class="pp-body">
+          <div class="pp-row"><span class="pp-lbl">Profil</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:150px">${f.type}</span></div>
+          <span class="pp-tag" style="background:#1d6a8a">BtoB Façonnier ≥ 150 kg/mois</span>
+        </div>`, { maxWidth: 300 });
+  });
+}
+
+// ── Clients naturopathes ──────────────────────────────
+function drawNaturo() {
+  CLIENTS_NATURO.forEach(n => {
+    L.marker([n.lat, n.lng], { icon: makeIcon(n.color, '🌱', 10) })
+      .addTo(map)
+      .bindPopup(`
+        <div class="pp-head" style="background:#52b788">
+          <div class="pp-icon" style="background:rgba(255,255,255,.2)">🌱</div>
+          <div>
+            <div class="pp-name">${n.nom}</div>
+            <div class="pp-sub">Prescripteur bien-être</div>
+          </div>
+        </div>
+        <div class="pp-body">
+          <div class="pp-row"><span class="pp-lbl">Type</span><span class="pp-val" style="font-size:.67rem">${n.type}</span></div>
+          <span class="pp-tag" style="background:#52b788">Prescripteur — Tarif partenaire –20%</span>
+        </div>`, { maxWidth: 280 });
   });
 }
 
@@ -631,7 +671,7 @@ function drawMarches() {
         </div>`, { maxWidth: 260 });
   });
 
-  // ── Hôtels haut de gamme ──────────────────────────────
+  // Hôtels haut de gamme
   HOTELS.forEach(h => {
     L.marker([h.lat, h.lng], { icon: makeIcon(h.color, '🏨', 11) })
       .addTo(map)
@@ -644,15 +684,16 @@ function drawMarches() {
           </div>
         </div>
         <div class="pp-body">
-          <div class="pp-row"><span class="pp-lbl">Profil</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:130px">${h.type}</span></div>
-        </div>`, { maxWidth: 260 });
+          <div class="pp-row"><span class="pp-lbl">Profil</span><span class="pp-val" style="font-size:.67rem;text-align:right;max-width:150px">${h.type}</span></div>
+          <span class="pp-tag" style="background:${h.color}">Client potentiel</span>
+        </div>`, { maxWidth: 280 });
   });
 }
 
 // ── Vues ──────────────────────────────────────────────
 function flyTo(v) {
   const views = {
-    metropole: { center: [44.863, -0.590], zoom: 11 },
+    metropole: { center: [44.863, -0.560], zoom: 10 },
     gironde:   { center: [44.800, -0.500], zoom:  8 }
   };
   map.flyTo(views[v].center, views[v].zoom, { duration: 0.7 });
