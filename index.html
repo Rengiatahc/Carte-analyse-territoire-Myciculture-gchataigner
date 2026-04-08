@@ -17,7 +17,7 @@
   --sage:   #6b7c5c;
   --cream:  #f5f0e8;
   --moss:   #3d5c2a;
-  --header-h: 56px;
+  --header-h: 72px;
 }
 
 html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden; }
@@ -174,7 +174,7 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
 
 <div id="header">
   <div class="logo">
-    <div class="logo-icon">🍄</div>
+    <img src="data:image/png;base64,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" alt="Synapse Mush Farm" style="height:64px;width:auto;object-fit:contain;filter:brightness(1.1);margin-right:4px;" />
     Synapse Mush Farm — Cartographie territoire
     <span class="logo-sub">BPREA 2026 · Beychac-et-Caillau</span>
   </div>
@@ -194,11 +194,19 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <div class="leg-title">Zones de chalandise</div>
       <div class="leg-item">
         <div class="leg-zone" style="background:#3d5c2a;border:2px dashed #3d5c2a"></div>
-        Zone principale — Bordeaux Métropole
+        Zone 1 — Bordeaux Métropole (Phase 1)
       </div>
       <div class="leg-item">
         <div class="leg-zone" style="background:#c8a84b;border:2px dashed #c8a84b"></div>
-        Zone secondaire — Gironde
+        Zone 2 — Gironde (Phase 1–2)
+      </div>
+      <div class="leg-item">
+        <div class="leg-zone" style="background:#8e44ad;border:2px dashed #8e44ad"></div>
+        Zone 3 — Nouvelle-Aquitaine (Phase 2)
+      </div>
+      <div class="leg-item">
+        <div class="leg-zone" style="background:#2980b9;border:2px dashed #2980b9"></div>
+        Zone 4 — Nationale / E-commerce (Phase 2–3)
       </div>
     </div>
 
@@ -222,7 +230,7 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#c0392b"></div>
-        Concurrent européen ou asiatique (import)
+        Concurrent européen (DE / PL) ou asiatique
       </div>
       <div class="leg-item">
         <div class="leg-circle" style="background:#9b72cf"></div>
@@ -287,6 +295,7 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; overflow: hidden;
       <button class="vbtn on" id="vbm" onclick="flyTo('metropole')">Métropole</button>
       <button class="vbtn"    id="vbg" onclick="flyTo('gironde')">Gironde</button>
       <button class="vbtn"    id="vbe" onclick="flyTo('europe')">Europe</button>
+      <button class="vbtn"    id="vbw" onclick="flyTo('monde')">Monde</button>
     </div>
   </div>
 </div>
@@ -375,18 +384,18 @@ const CONCURRENTS = [
     color: "#e76f51"
   },
   {
-    nom: "La Mycosphère (franco-belge — Nouvelle-Aquitaine)",
-    lat: 45.1800, lng: -0.0200,
+    nom: "La Mycosphère (Gembloux, Belgique)",
+    lat: 50.5610, lng: 4.7130,
     type: "Concurrent médicinal / Partenaire possible",
     produits: "Champignons bio premium — présent sur 20+ marchés",
-    circuit: "Marchés bio, e-commerce, réseau épiceries — hors Gironde actuellement",
+    circuit: "Marchés bio, e-commerce, réseau épiceries — Belgique & France",
     prix: "Bio premium",
     menace: "Concurrent potentiel sur réseau bio — partenaire possible à terme",
     color: "#e76f51"
   },
   {
-    nom: "Les Myconautes & Champiloop (Grenoble)",
-    lat: 45.1885, lng: 5.7245,
+    nom: "Les Myconautes & Champiloop (Rive-de-Gier, 42)",
+    lat: 45.5295, lng: 4.6196,
     type: "Concurrent médicinal France",
     produits: "Champignons médicinaux déshydratés & frais — Reishi, Lion's mane, Shiitake",
     circuit: "Vente directe, marchés bio, e-commerce — rayonnement régional Auvergne-Rhône-Alpes",
@@ -414,15 +423,35 @@ const CONCURRENTS = [
     menace: "Modèle multi-implantations à surveiller — champignons frais uniquement, hors segment médicinal déshydraté",
     color: "#9b72cf"
   },
-  // Concurrents européens (Pologne / Allemagne)
   {
-    nom: "Concurrents polonais & allemands",
-    lat: 52.0000, lng: 16.0000,
-    type: "Concurrents européens — production industrielle",
-    produits: "Champignons médicinaux déshydratés & extraits en volume — Reishi, Lion's mane, Cordyceps",
-    circuit: "Grossistes, façonniers européens, e-commerce B2B — prix très compétitifs",
-    prix: "5–20 €/kg (vrac industriel)",
-    menace: "Pression prix forte sur le segment façonniers — principal argument différenciant Synapse : origine France + traçabilité",
+    nom: "La Cave Agricole — Lyon",
+    lat: 45.7640, lng: 4.8357,
+    type: "Concurrent / Partenaire potentiel — site Lyon",
+    produits: "Champignons frais bio — production urbaine en cave",
+    circuit: "Restaurateurs lyonnais, épiceries bio, Drive Fermier",
+    prix: "NC",
+    menace: "Présence Lyon — champignons frais uniquement, hors segment médicinal déshydraté",
+    color: "#9b72cf"
+  },
+  // Concurrents européens — Allemagne séparé
+  {
+    nom: "Concurrents allemands (DE)",
+    lat: 51.1657, lng: 10.4515,
+    type: "Concurrents européens — Allemagne",
+    produits: "Champignons médicinaux déshydratés & extraits — Reishi, Lion's mane — production semi-industrielle",
+    circuit: "Grossistes bio, e-commerce B2C et B2B, façonniers européens",
+    prix: "8–25 €/kg (vrac) — prix compétitifs vs France",
+    menace: "Concurrents directs sur le segment déshydraté européen — argument Synapse : origine France + traçabilité certifiée",
+    color: "#c0392b"
+  },
+  {
+    nom: "Concurrents polonais (PL)",
+    lat: 51.9194, lng: 19.1451,
+    type: "Concurrents européens — Pologne",
+    produits: "Champignons médicinaux déshydratés en volume — production industrielle low-cost",
+    circuit: "Grossistes, importateurs français, façonniers européens — volumes importants",
+    prix: "5–15 €/kg (vrac industriel) — dumping prix fréquent",
+    menace: "Pression prix forte sur le segment façonniers — traçabilité et origine France = réponse directe",
     color: "#c0392b"
   },
   // Concurrents asiatiques
@@ -451,6 +480,7 @@ const CONCURRENTS = [
 
 // ── Clients BtoB — Façonniers ─────────────────────────
 const CLIENTS_FACONNIERS = [
+  { nom: "Activ'Inside (Beychac-et-Caillau)", lat: 44.8680, lng: -0.4620, type: "Façonnier compléments alimentaires — voisin direct Synapse — potentiel contrat prioritaire", color: "#1d6a8a" },
   { nom: "Phyt'Inov (Agen, 47)", lat: 44.2040, lng: 0.6200, type: "Façonnier compléments alimentaires — potentiel contrat 150 kg/mois", color: "#1d6a8a" },
   { nom: "Nutraceutics (Bordeaux Métropole)", lat: 44.8900, lng: -0.5400, type: "Façonnier / distributeur compléments — Gironde", color: "#1d6a8a" },
   { nom: "Léa Nature / So'Bio (Périgny, 17)", lat: 46.0800, lng: -1.0900, type: "Groupe bio — marques So'Bio, Jardin Bio — façonnier potentiel premium", color: "#1d6a8a" },
@@ -547,6 +577,34 @@ window.addEventListener('load', () => {
 
 // ── Zones de chalandise ──────────────────────────────
 function drawZones() {
+  // Zone nationale : France entière (contour simplifié)
+  L.polygon([
+    [51.089,-2.000],[51.100, 2.550],[50.820, 6.820],[49.500, 8.200],
+    [47.620, 7.590],[46.380, 6.100],[43.770, 7.380],[43.370, 5.050],
+    [42.350, 3.150],[42.340,-1.780],[43.390,-1.760],[43.930,-1.500],
+    [46.700,-2.300],[47.550,-2.500],[48.650,-4.700],[48.730,-4.480],
+    [49.120,-2.080],[49.680,-1.920],[50.120,-1.680],[51.089,-2.000]
+  ], {
+    color: '#2980b9', weight: 1.5, opacity: 0.5,
+    fillColor: '#2980b9', fillOpacity: 0.03, dashArray: '14 7'
+  }).addTo(map).bindTooltip('Zone nationale — France (~67M hab.) — E-commerce + façonniers nationaux', {
+    permanent: false, direction: 'center', className: 'zone-tooltip'
+  });
+
+  // Zone Nouvelle-Aquitaine
+  L.polygon([
+    [47.560,-1.850],[47.590,-0.200],[47.480, 0.800],[46.780, 1.100],
+    [46.380, 1.300],[45.850, 1.700],[45.350, 1.900],[44.850, 1.800],
+    [44.350, 1.500],[43.900, 1.400],[43.300, 0.700],[43.200,-0.800],
+    [43.350,-1.750],[43.800,-1.800],[44.500,-1.600],[45.200,-1.550],
+    [46.000,-1.900],[46.800,-2.200],[47.560,-1.850]
+  ], {
+    color: '#8e44ad', weight: 1.8, opacity: 0.65,
+    fillColor: '#8e44ad', fillOpacity: 0.05, dashArray: '10 5'
+  }).addTo(map).bindTooltip('Zone Nouvelle-Aquitaine (~6M hab.) — Extension Phase 2 : Bayonne, Périgueux, Pau, Angoulême', {
+    permanent: false, direction: 'center', className: 'zone-tooltip'
+  });
+
   // Zone principale : Bordeaux Métropole
   L.polygon([
     [44.960,-0.740],[44.958,-0.610],[44.962,-0.545],[44.958,-0.475],
@@ -556,13 +614,12 @@ function drawZones() {
     [44.952,-0.752],[44.960,-0.740]
   ], {
     color: '#3d5c2a', weight: 2.5, opacity: 0.9,
-    fillColor: '#3d5c2a', fillOpacity: 0.06, dashArray: '8 5'
-  }).addTo(map).bindTooltip('Zone principale — Bordeaux Métropole (854 334 hab.)', {
-    permanent: false, direction: 'center',
-    className: 'zone-tooltip'
+    fillColor: '#3d5c2a', fillOpacity: 0.08, dashArray: '8 5'
+  }).addTo(map).bindTooltip('Zone principale — Bordeaux Métropole (854 334 hab.) — Phase 1 prioritaire', {
+    permanent: false, direction: 'center', className: 'zone-tooltip'
   });
 
-  // Zone secondaire : Gironde (approximation)
+  // Zone secondaire : Gironde
   L.polygon([
     [45.580,-1.280],[45.620,-0.520],[45.580, 0.100],[45.300, 0.350],
     [44.980, 0.380],[44.690, 0.200],[44.490,-0.010],[44.200,-0.380],
@@ -570,10 +627,9 @@ function drawZones() {
     [45.000,-1.480],[45.300,-1.420],[45.580,-1.280]
   ], {
     color: '#c8a84b', weight: 1.5, opacity: 0.6,
-    fillColor: '#c8a84b', fillOpacity: 0.04, dashArray: '10 6'
-  }).addTo(map).bindTooltip('Zone secondaire — Gironde (~1 600 000 hab.)', {
-    permanent: false, direction: 'center',
-    className: 'zone-tooltip'
+    fillColor: '#c8a84b', fillOpacity: 0.05, dashArray: '10 6'
+  }).addTo(map).bindTooltip('Zone secondaire — Gironde (~1 600 000 hab.) — Phase 1–2', {
+    permanent: false, direction: 'center', className: 'zone-tooltip'
   });
 }
 
@@ -596,14 +652,30 @@ function makeIcon(color, emoji, size = 14) {
 // ── Sites de production ───────────────────────────────
 function drawSites() {
   SITES_PRODUCTION.forEach(s => {
-    // Cercle de zone pulsant (priorité)
+    // Cercle pulsant
     L.circle([s.lat, s.lng], {
       radius: 2000,
       color: s.color, weight: 2.5, opacity: 0.7,
       fillColor: s.color, fillOpacity: 0.10, dashArray: '8 5'
     }).addTo(map);
 
-    L.marker([s.lat, s.lng], { icon: makeIcon(s.color, '🏭', 15) })
+    // Marqueur Synapse — grand, avec zIndexOffset élevé pour être devant tout
+    const synapseIcon = L.divIcon({
+      className: '',
+      html: `<div class="synapse-pin">
+        <div class="synapse-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="-27 -27 54 54">
+          <circle cx="0" cy="0" r="22" fill="${s.color}" opacity="0.25"/>
+          <circle cx="0" cy="0" r="18" fill="${s.color}" stroke="white" stroke-width="3"/>
+          <text x="0" y="1" text-anchor="middle" dominant-baseline="middle" font-size="18" fill="white">🏭</text>
+        </svg>
+        <div class="synapse-label">SYNAPSE<br>MUSH FARM</div>
+      </div>`,
+      iconSize: [54, 72],
+      iconAnchor: [27, 27]
+    });
+
+    L.marker([s.lat, s.lng], { icon: synapseIcon, zIndexOffset: 9999 })
       .addTo(map)
       .bindPopup(`
         <div class="pp-head" style="background:#2C5F2D">
@@ -755,12 +827,13 @@ function flyTo(v) {
   const views = {
     metropole: { center: [44.863, -0.560], zoom: 10 },
     gironde:   { center: [44.800, -0.500], zoom:  8 },
-    europe:    { center: [48.000, 10.000], zoom:  4 }
+    europe:    { center: [48.000, 10.000], zoom:  4 },
+    monde:     { center: [30.000, 50.000], zoom:  2 }
   };
-  map.flyTo(views[v].center, views[v].zoom, { duration: 0.7 });
-  document.getElementById('vbm').classList.toggle('on', v === 'metropole');
-  document.getElementById('vbg').classList.toggle('on', v === 'gironde');
-  document.getElementById('vbe').classList.toggle('on', v === 'europe');
+  map.flyTo(views[v].center, views[v].zoom, { duration: 0.9 });
+  ['vbm','vbg','vbe','vbw'].forEach(id => document.getElementById(id).classList.remove('on'));
+  const ids = { metropole:'vbm', gironde:'vbg', europe:'vbe', monde:'vbw' };
+  document.getElementById(ids[v]).classList.add('on');
   setTimeout(() => map.invalidateSize(), 100);
 }
 
@@ -778,6 +851,43 @@ function toggleLegend() {
   font-weight: 700 !important; font-size: .66rem !important;
   color: #2a1f0e !important; letter-spacing: .03em !important;
   box-shadow: 0 2px 8px rgba(46,31,14,.12) !important;
+}
+
+/* ── Pin Synapse ── */
+.synapse-pin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.synapse-pulse {
+  position: absolute;
+  top: 0; left: 0;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: rgba(44, 95, 45, 0.35);
+  animation: pulse-synapse 2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes pulse-synapse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.synapse-label {
+  margin-top: 2px;
+  background: #2C5F2D;
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 </style>
 </body>
